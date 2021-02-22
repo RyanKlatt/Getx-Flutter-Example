@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_flutter_example/controllers/main_controller.dart';
 
 class HomePage extends StatelessWidget {
+  final MainController _mainController = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,8 +16,12 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Welcome Home!',
+            RaisedButton(
+              onPressed: () {
+                Get.changeTheme(
+                    Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+              },
+              child: Text('Change Theme'),
             ),
           ],
         ),
