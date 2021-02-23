@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_flutter_example/controllers/main_controller.dart';
+import 'package:getx_flutter_example/controllers/example_one_controller.dart';
 
 class ExampleOnePage extends StatelessWidget {
-  final MainController _mainController = Get.find();
+  final ExampleOneController _exampleOneController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ExampleOnePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('${_mainController.count}'),
+            Text('${_exampleOneController.count}'),
           ],
         ),
       ),
